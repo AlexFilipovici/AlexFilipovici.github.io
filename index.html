@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETENA Tech s.r.o. - Technology Solutions</title>
+    <title>ETENA Tech s.r.o. - SharePoint Solutions</title>
     <style>
         * {
             margin: 0;
@@ -12,13 +12,13 @@
         }
         
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #2F2F2F;
         }
         
         header {
-            background: linear-gradient(135deg, #ffcc00 0%, #cc0000 100%);
+            background: linear-gradient(135deg, #0078D4 0%, #5B2E91 100%);
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -63,8 +63,9 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(255, 204, 0, 0.8), rgba(204, 0, 0, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><rect fill="%23f0f0f0" width="1000" height="600"/></svg>');
+            background: linear-gradient(rgba(0, 120, 212, 0.8), rgba(91, 46, 145, 0.8)), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
+            background-position: center;
             padding: 6rem 2rem;
             text-align: center;
             color: white;
@@ -85,7 +86,7 @@
         
         .cta-button {
             display: inline-block;
-            background: #cc0000;
+            background: #107C10;
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
@@ -95,7 +96,7 @@
         }
         
         .cta-button:hover {
-            background: #aa0000;
+            background: #0c5c0c;
         }
         
         .container {
@@ -112,7 +113,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: #2F2F2F;
         }
         
         .services {
@@ -129,23 +130,60 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s;
+            border-top: 4px solid #00BCF2;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
         }
         
+        .service-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
         .service-card h3 {
-            color: #cc0000;
+            color: #0078D4;
             margin-bottom: 1rem;
         }
         
         .about {
-            background: #f8f9fa;
+            background: #F3F2F1;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            color: #605E5C;
+        }
+        
+        .about-image {
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .contact {
-            background: #333;
+            background: #2F2F2F;
+            color: white;
+        }
+        
+        .contact h2 {
             color: white;
         }
         
@@ -156,8 +194,13 @@
             margin-top: 2rem;
         }
         
+        .contact-info h3 {
+            color: #00BCF2;
+            margin-bottom: 0.5rem;
+        }
+        
         footer {
-            background: #222;
+            background: #004578;
             color: white;
             text-align: center;
             padding: 2rem 0;
@@ -174,6 +217,10 @@
             
             .hero p {
                 font-size: 1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -195,7 +242,7 @@
         <section id="home" class="hero">
             <div class="container">
                 <h1>Welcome to ETENA Tech s.r.o.</h1>
-                <p>Innovative technology solutions for modern businesses. We deliver cutting-edge software development and IT consulting services.</p>
+                <p>Expert SharePoint consultancy services delivered in English. Specializing in SharePoint architecture, development, and consulting - available on-site or remote.</p>
                 <a href="#contact" class="cta-button">Get Started</a>
             </div>
         </section>
@@ -205,16 +252,19 @@
                 <h2>Our Services</h2>
                 <div class="services">
                     <div class="service-card">
-                        <h3>Software Development</h3>
-                        <p>Custom software solutions tailored to your business needs. From web applications to enterprise systems.</p>
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SharePoint Development">
+                        <h3>SharePoint Development</h3>
+                        <p>Custom SharePoint solutions, web parts, and applications tailored to your business requirements.</p>
                     </div>
                     <div class="service-card">
-                        <h3>IT Consulting</h3>
-                        <p>Expert guidance on technology strategy, digital transformation, and system architecture.</p>
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SharePoint Consulting">
+                        <h3>SharePoint Consulting</h3>
+                        <p>Expert guidance on SharePoint strategy, governance, migration, and best practices implementation.</p>
                     </div>
                     <div class="service-card">
-                        <h3>Cloud Solutions</h3>
-                        <p>Migrate to the cloud with confidence. We provide comprehensive cloud integration and management services.</p>
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SharePoint Architecture">
+                        <h3>SharePoint Architecture</h3>
+                        <p>Comprehensive SharePoint architecture design and planning for scalable, secure, and efficient solutions.</p>
                     </div>
                 </div>
             </div>
@@ -223,11 +273,22 @@
         <section id="about" class="section about">
             <div class="container">
                 <h2>About ETENA Tech</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-                    ETENA Tech s.r.o. is a leading technology company specializing in innovative software solutions. 
-                    With years of experience in the industry, we help businesses leverage technology to achieve their goals 
-                    and stay competitive in today's digital landscape.
-                </p>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            ETENA Tech s.r.o. is a young technology company established in December 2024, founded by Alex Filipovici, 
+                            an experienced SharePoint architect, consultant, and developer. Based in Prague, Czech Republic, we specialize 
+                            exclusively in English-speaking SharePoint consultancy services.
+                        </p>
+                        <p style="margin-top: 1rem;">
+                            We offer flexible engagement models with both on-site and remote consultancy options, ensuring that 
+                            distance is never a barrier to delivering exceptional SharePoint solutions for your business.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SharePoint Expert">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -237,18 +298,18 @@
                 <div class="contact-info">
                     <div>
                         <h3>Get in Touch</h3>
-                        <p>Ready to start your next project? Contact us today for a consultation.</p>
+                        <p>Ready to enhance your SharePoint environment? Contact us for a consultation in English.</p>
                     </div>
                     <div>
                         <h3>Email</h3>
                         <p>info@etenatech.com</p>
                     </div>
                     <div>
-                        <h3>Phone</h3>
-                        <p>+420 XXX XXX XXX</p>
+                        <h3>Services</h3>
+                        <p>On-site & Remote Consultancy</p>
                     </div>
                     <div>
-                        <h3>Address</h3>
+                        <h3>Location</h3>
                         <p>Prague, Czech Republic</p>
                     </div>
                 </div>
@@ -258,8 +319,11 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 ETENA Tech s.r.o. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> ETENA Tech s.r.o. All rights reserved.</p>
         </div>
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
     </footer>
 
     <script>
