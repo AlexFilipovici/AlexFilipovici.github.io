@@ -81,4 +81,4 @@ Ready to transform your business with technology? Contact us for a free consulta
 
 ---
 
-*© 2024 ETENA Tech s.r.o. All rights reserved.*
+*© <script>document.write(new Date().getFullYear())</script> ETENA Tech s.r.o. All rights reserved.*
