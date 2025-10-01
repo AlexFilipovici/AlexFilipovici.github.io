@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
     <title>ETENA Tech s.r.o. - Enterprise SharePoint & Power Platform Solutions</title>
     <style>
         * {
@@ -10,13 +14,13 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #2F2F2F;
         }
-        
+
         header {
             background: linear-gradient(135deg, #0078D4 0%, #5B2E91 100%);
             color: white;
@@ -25,9 +29,9 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -36,29 +40,29 @@
             margin: 0 auto;
             padding: 0 2rem;
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
             align-items: center;
         }
-        
+
         .nav-links a {
             color: white;
             text-decoration: none;
             transition: opacity 0.3s;
         }
-        
+
         .nav-links a:hover {
             opacity: 0.8;
         }
-        
+
         .nav-cta {
             background: #107C10;
             padding: 0.5rem 1rem;
@@ -66,16 +70,16 @@
             font-weight: bold;
             transition: background 0.3s;
         }
-        
+
         .nav-cta:hover {
             background: #0c5c0c;
             opacity: 1;
         }
-        
+
         main {
             margin-top: 80px;
         }
-        
+
         .hero {
             background: linear-gradient(rgba(0, 120, 212, 0.8), rgba(91, 46, 145, 0.8)), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
@@ -84,20 +88,20 @@
             text-align: center;
             color: white;
         }
-        
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
-        
+
         .hero .subtitle {
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: #E1E1E1;
             font-weight: 300;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2.5rem;
@@ -105,14 +109,14 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .cta-button {
             display: inline-block;
             padding: 1.2rem 2.5rem;
@@ -123,38 +127,38 @@
             transition: all 0.3s;
             text-align: center;
         }
-        
+
         .cta-primary {
             background: #107C10;
             color: white;
         }
-        
+
         .cta-primary:hover {
             background: #0c5c0c;
             transform: translateY(-2px);
         }
-        
+
         .cta-secondary {
             background: transparent;
             color: white;
             border: 2px solid white;
         }
-        
+
         .cta-secondary:hover {
             background: white;
             color: #0078D4;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-        
+
         .section {
             padding: 5rem 0;
         }
-        
+
         .section h2 {
             text-align: center;
             font-size: 2.8rem;
@@ -162,7 +166,7 @@
             color: #2F2F2F;
             font-weight: 600;
         }
-        
+
         .section .subtitle {
             text-align: center;
             font-size: 1.2rem;
@@ -172,47 +176,47 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .benefits {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
-        
+
         .benefit-item {
             text-align: center;
             padding: 1.5rem;
         }
-        
+
         .benefit-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-        
+
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        
+
         .service-card {
             background: white;
             padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: all 0.3s;
             border-top: 5px solid #00BCF2;
             position: relative;
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
+
         .service-card img {
             width: 80px;
             height: 80px;
@@ -220,69 +224,69 @@
             border-radius: 50%;
             object-fit: cover;
         }
-        
+
         .service-card h3 {
             color: #0078D4;
             margin-bottom: 1rem;
             font-size: 1.4rem;
         }
-        
+
         .service-card p {
             margin-bottom: 1.5rem;
             color: #605E5C;
         }
-        
+
         .service-features {
             list-style: none;
             text-align: left;
             margin: 1rem 0;
         }
-        
+
         .service-features li {
             padding: 0.3rem 0;
             color: #2F2F2F;
         }
-        
+
         .service-features li:before {
             content: "✓";
             color: #107C10;
             font-weight: bold;
             margin-right: 0.5rem;
         }
-        
+
         .testimonials {
             background: #F8F9FA;
         }
-        
+
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        
+
         .testimonial {
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .testimonial-text {
             font-style: italic;
             margin-bottom: 1rem;
             color: #605E5C;
         }
-        
+
         .testimonial-author {
             font-weight: bold;
             color: #0078D4;
         }
-        
+
         .about {
             background: #F3F2F1;
         }
-        
+
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -290,38 +294,38 @@
             align-items: center;
             margin-top: 2rem;
         }
-        
+
         .about-text {
             font-size: 1.1rem;
             color: #605E5C;
         }
-        
+
         .about-text h3 {
             color: #0078D4;
             margin: 1.5rem 0 0.5rem 0;
             font-size: 1.3rem;
         }
-        
+
         .about-image {
             text-align: center;
         }
-        
+
         .about-image img {
             max-width: 100%;
             height: auto;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .contact {
             background: #2F2F2F;
             color: white;
         }
-        
+
         .contact h2 {
             color: white;
         }
-        
+
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -329,29 +333,29 @@
             margin-top: 3rem;
             align-items: start;
         }
-        
+
         .contact-form {
             background: #3F3F3F;
             padding: 2rem;
             border-radius: 10px;
         }
-        
+
         .contact-form h3 {
             color: #00BCF2;
             margin-bottom: 1.5rem;
             font-size: 1.5rem;
         }
-        
+
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             color: #E1E1E1;
         }
-        
+
         .form-group input,
         .form-group select,
         .form-group textarea {
@@ -363,64 +367,65 @@
             color: white;
             font-family: inherit;
         }
-        
+
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: 2px solid #00BCF2;
         }
-        
+
         .contact-info {
             display: grid;
             gap: 2rem;
         }
-        
+
         .contact-info h3 {
             color: #00BCF2;
             margin-bottom: 0.5rem;
             font-size: 1.3rem;
         }
-        
+
         .contact-info p {
             margin-bottom: 1rem;
         }
-        
+
         footer {
             background: #004578;
             color: white;
             text-align: center;
             padding: 2rem 0;
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .hero p {
                 font-size: 1rem;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
             }
-            
+
             .services {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -429,20 +434,35 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="nav-cta">Request Offer</a></li>
+                <li><a
+                        href="#contact"
+                        class="nav-cta"
+                    >Request Offer</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero" style="background: linear-gradient(rgba(0, 120, 212, 0.7), rgba(91, 46, 145, 0.7)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <section
+            id="home"
+            class="hero"
+            style="background: linear-gradient(rgba(0, 120, 212, 0.7), rgba(91, 46, 145, 0.7)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed;"
+        >
             <div class="container">
                 <h1>Transform Your Enterprise</h1>
                 <div class="subtitle">with Expert SharePoint & Power Platform Solutions</div>
-                <p>Specializing in SharePoint architecture, Power Automate workflows, and modern Single Page Applications. Delivered in English for enterprise clients across Europe - available on-site or remote.</p>
+                <p>Specializing in SharePoint architecture, Power Automate workflows, and modern Single Page
+                    Applications. Delivered in English for enterprise clients across Europe - available on-site or
+                    remote.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="cta-button cta-primary">Request Your Custom Offer</a>
-                    <a href="#services" class="cta-button cta-secondary">Explore Services</a>
+                    <a
+                        href="#contact"
+                        class="cta-button cta-primary"
+                    >Request Your Custom Offer</a>
+                    <a
+                        href="#services"
+                        class="cta-button cta-secondary"
+                    >Explore Services</a>
                 </div>
             </div>
         </section>
@@ -474,13 +494,20 @@
             </div>
         </section>
 
-        <section id="services" class="section">
+        <section
+            id="services"
+            class="section"
+        >
             <div class="container">
                 <h2>Enterprise Solutions</h2>
-                <p class="subtitle">Comprehensive SharePoint and Power Platform services designed to drive your business forward</p>
+                <p class="subtitle">Comprehensive SharePoint and Power Platform services designed to drive your business
+                    forward</p>
                 <div class="services">
                     <div class="service-card">
-                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SharePoint Development">
+                        <img
+                            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="SharePoint Development"
+                        >
                         <h3>SharePoint Development</h3>
                         <p>Custom SharePoint solutions that integrate seamlessly with your enterprise ecosystem.</p>
                         <ul class="service-features">
@@ -491,7 +518,10 @@
                         </ul>
                     </div>
                     <div class="service-card">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SharePoint Consulting">
+                        <img
+                            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="SharePoint Consulting"
+                        >
                         <h3>SharePoint Architecture & Consulting</h3>
                         <p>Strategic guidance for scalable, secure SharePoint implementations.</p>
                         <ul class="service-features">
@@ -502,7 +532,10 @@
                         </ul>
                     </div>
                     <div class="service-card">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Power Automate">
+                        <img
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="Power Automate"
+                        >
                         <h3>Power Automate Solutions</h3>
                         <p>Streamline your business processes with intelligent workflow automation.</p>
                         <ul class="service-features">
@@ -513,7 +546,10 @@
                         </ul>
                     </div>
                     <div class="service-card">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Single Page Applications">
+                        <img
+                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="Single Page Applications"
+                        >
                         <h3>Modern Single Page Applications</h3>
                         <p>Fast, responsive web applications built with modern frameworks.</p>
                         <ul class="service-features">
@@ -525,7 +561,10 @@
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 3rem;">
-                    <a href="#contact" class="cta-button cta-primary">Get Your Personalized Quote</a>
+                    <a
+                        href="#contact"
+                        class="cta-button cta-primary"
+                    >Get Your Personalized Quote</a>
                 </div>
             </div>
         </section>
@@ -536,74 +575,118 @@
                 <p class="subtitle">Trusted by enterprise clients across Europe</p>
                 <div class="testimonial-grid">
                     <div class="testimonial">
-                        <div class="testimonial-text">"ETENA Tech delivered exceptional SharePoint solutions that transformed our document management. Their English-speaking expertise made collaboration seamless."</div>
+                        <div class="testimonial-text">"ETENA Tech delivered exceptional SharePoint solutions that
+                            transformed our document management. Their English-speaking expertise made collaboration
+                            seamless."</div>
                         <div class="testimonial-author">- Enterprise Client, Germany</div>
                     </div>
                     <div class="testimonial">
-                        <div class="testimonial-text">"The Power Automate workflows they implemented saved us countless hours and significantly improved our business processes."</div>
+                        <div class="testimonial-text">"The Power Automate workflows they implemented saved us countless
+                            hours and significantly improved our business processes."</div>
                         <div class="testimonial-author">- IT Director, Multinational Corp</div>
                     </div>
                     <div class="testimonial">
-                        <div class="testimonial-text">"Professional, reliable, and results-driven. Their remote consultancy model worked perfectly for our international team."</div>
+                        <div class="testimonial-text">"Professional, reliable, and results-driven. Their remote
+                            consultancy model worked perfectly for our international team."</div>
                         <div class="testimonial-author">- Project Manager, Czech Republic</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section about">
+        <section
+            id="about"
+            class="section about"
+        >
             <div class="container">
                 <h2>About ETENA Tech</h2>
                 <div class="about-content">
                     <div class="about-text">
                         <p>
-                            ETENA Tech s.r.o. is a specialized technology company established in December 2024, founded by Alex Filipovici, 
-                            an experienced SharePoint architect, consultant, and developer with extensive enterprise experience.
+                            ETENA Tech s.r.o. is a specialized technology company established in December 2024, founded
+                            by Alex Filipovici,
+                            an experienced SharePoint architect, consultant, and developer with extensive enterprise
+                            experience.
                         </p>
-                        
+
                         <h3>Why Choose Us for Your Enterprise?</h3>
                         <p>
-                            Based in Prague, Czech Republic, we exclusively serve enterprise clients with English-speaking consultancy services. 
-                            Our focus on business outcomes ensures that every technical solution drives real value for your organization.
+                            Based in Prague, Czech Republic, we exclusively serve enterprise clients with
+                            English-speaking consultancy services.
+                            Our focus on business outcomes ensures that every technical solution drives real value for
+                            your organization.
                         </p>
-                        
+
                         <h3>Flexible Engagement</h3>
                         <p>
-                            We understand that enterprise projects require flexibility. Whether you need on-site presence for critical implementations 
+                            We understand that enterprise projects require flexibility. Whether you need on-site
+                            presence for critical implementations
                             or prefer remote collaboration for ongoing support, we adapt to your business needs.
                         </p>
                     </div>
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Enterprise SharePoint Solutions">
+                        <img
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Enterprise SharePoint Solutions"
+                        >
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section contact">
+        <section
+            id="contact"
+            class="section contact"
+        >
             <div class="container">
                 <h2>Ready to Transform Your Enterprise?</h2>
-                <p class="subtitle" style="color: #E1E1E1;">Let's discuss your specific requirements and create a tailored solution for your business</p>
-                
+                <p
+                    class="subtitle"
+                    style="color: #E1E1E1;"
+                >Let's discuss your specific requirements and create a tailored solution for your business</p>
+
                 <div class="contact-content">
                     <div class="contact-form">
                         <h3>Request Your Custom Offer</h3>
-                        <form action="https://usebasin.com/f/d84ea63dec0b" method="POST" enctype="multipart/form-data" id="form" >
+                        <form
+                            action="https://usebasin.com/f/d84ea63dec0b"
+                            method="POST"
+                            enctype="multipart/form-data"
+                            id="form"
+                        >
                             <div class="form-group">
                                 <label for="company">Company Name *</label>
-                                <input type="text" id="company" name="company" required>
+                                <input
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    required
+                                >
                             </div>
                             <div class="form-group">
                                 <label for="name">Your Name *</label>
-                                <input type="text" id="name" name="name" required>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                >
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                >
                             </div>
                             <div class="form-group">
                                 <label for="service">Service Interest</label>
-                                <select id="service" name="service">
+                                <select
+                                    id="service"
+                                    name="service"
+                                >
                                     <option value="">Select a service</option>
                                     <option value="sharepoint-dev">SharePoint Development</option>
                                     <option value="sharepoint-consulting">SharePoint Architecture & Consulting</option>
@@ -614,12 +697,21 @@
                             </div>
                             <div class="form-group">
                                 <label for="message">Project Details</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your project requirements, timeline, and any specific challenges you're facing..."></textarea>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    placeholder="Tell us about your project requirements, timeline, and any specific challenges you're facing..."
+                                ></textarea>
                             </div>
-                            <button type="submit" class="cta-button cta-primary" style="width: 100%; margin-top: 1rem;">Send Request for Offer</button>
+                            <button
+                                type="submit"
+                                class="cta-button cta-primary"
+                                style="width: 100%; margin-top: 1rem;"
+                            >Send Request for Offer</button>
                         </form>
                     </div>
-                    
+
                     <div class="contact-info">
                         <div>
                             <h3>Direct Contact</h3>
@@ -635,15 +727,15 @@
                         <div>
                             <h3>Company Location</h3>
                             <p><strong>ETENA Tech s.r.o.</strong><br>
-                            Prague, Czech Republic</p>
+                                Prague, Czech Republic</p>
                             <p>European time zone for optimal collaboration with enterprise clients.</p>
                         </div>
                         <div>
                             <h3>Next Steps</h3>
                             <p>1. Submit your request<br>
-                            2. Initial consultation call<br>
-                            3. Detailed proposal<br>
-                            4. Project kickoff</p>
+                                2. Initial consultation call<br>
+                                3. Detailed proposal<br>
+                                4. Project kickoff</p>
                         </div>
                     </div>
                 </div>
@@ -653,13 +745,15 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> ETENA Tech s.r.o. - Enterprise SharePoint & Power Platform Solutions. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> ETENA Tech s.r.o. - Enterprise SharePoint & Power Platform
+                Solutions. All rights reserved.</p>
         </div>
     </footer>
 
+
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
-        
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -669,12 +763,100 @@
                 });
             });
         });
+
+        // Form submission feedback
+        function showFormFeedback(message, type = 'success') {
+            // Remove any existing feedback
+            const existingFeedback = document.querySelector('.form-feedback');
+            if (existingFeedback) {
+            existingFeedback.remove();
+            }
+            
+            // Create feedback element
+            const feedback = document.createElement('div');
+            feedback.className = `form-feedback ${type}`;
+            feedback.innerHTML = `
+            <div class="feedback-icon">${type === 'success' ? '✓' : '⚠'}</div>
+            <div class="feedback-message">${message}</div>
+            `;
+            
+            // Add styles
+            feedback.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: ${type === 'success' ? '#107C10' : '#D83B01'};
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            z-index: 10000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            max-width: 350px;
+            `;
+            
+            document.body.appendChild(feedback);
+            
+            // Animate in
+            setTimeout(() => {
+            feedback.style.transform = 'translateX(0)';
+            }, 10);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+            feedback.style.transform = 'translateX(100%)';
+            setTimeout(() => feedback.remove(), 300);
+            }, 5000);
+        }
         
-        // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
+        // Merged form submission handler
+        const form = document.getElementById("form");
+        form.addEventListener("submit", (e) => {
             e.preventDefault();
-            alert('Thank you for your interest! We will contact you within 24 hours to discuss your requirements.');
+            
+            // Show loading state
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            const formData = new FormData(form);
+            
+            fetch("https://usebasin.com/f/d84ea63dec0b", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                },
+                body: formData,
+            })
+            .then((response) => {
+                // Reset button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                
+                if (response.status === 200) {
+                    console.log("success");
+                    showFormFeedback('Thank you for your interest! We will contact you within 24 hours to discuss your requirements.', 'success');
+                    form.reset();
+                } else {
+                    console.log("fail");
+                    showFormFeedback('There was an error sending your message. Please try again or contact us directly at info@etenatech.com', 'error');
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+                // Reset button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                showFormFeedback('There was an error sending your message. Please try again or contact us directly at info@etenatech.com', 'error');
+            });
         });
     </script>
 </body>
+
 </html>
