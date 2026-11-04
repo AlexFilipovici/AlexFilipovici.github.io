@@ -10,7 +10,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F5F2EC">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: https://stats.alexfilipovici.cz; connect-src https://stats.alexfilipovici.cz; font-src 'self'; base-uri 'none'; form-action 'none'">
 <link rel="canonical" href="https://alexfilipovici.cz/">
 
 <meta property="og:type" content="profile">
@@ -965,7 +965,7 @@ html:not(.js) .copy-btn,html:not(.js) #theme-toggle{display:none}
     </div>
     <div class="disclaimer">
       <p>This is a personal professional website. The information and opinions presented here are personal and do not represent or imply endorsement by any current or former employer.</p>
-      <p>This site sets no cookies and uses no analytics or third-party requests. Your light or dark theme choice is stored only in your browser.</p>
+      <p>This site sets no cookies. It uses GoatCounter for privacy-friendly, cookieless visit counts and link-click totals, with no personal data collected. Your light or dark theme choice is stored only in your browser.</p>
     </div>
   </div>
 </footer>
@@ -1173,6 +1173,25 @@ html:not(.js) .copy-btn,html:not(.js) #theme-toggle{display:none}
       });
     }, { passive: true });
   }
+})();
+</script>
+
+<script data-goatcounter="https://stats.alexfilipovici.cz/count" async src="assets/count.js"></script>
+<script>
+(function () {
+  function track(path, title) {
+    if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: path, title: title, event: true });
+  }
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('a[href], #copy-email');
+    if (!el) return;
+    if (el.id === 'copy-email') return track('click-copy-email', 'Copy email');
+    var h = el.getAttribute('href') || '';
+    if (h.indexOf('mailto:') === 0) track('click-email', 'Email');
+    else if (h.indexOf('linkedin.com') > -1) track('click-linkedin', 'LinkedIn');
+    else if (h.indexOf('github.com') > -1) track('click-github', 'GitHub');
+    else if (h.indexOf('stackoverflow.com') > -1) track('click-stackoverflow', 'Stack Overflow');
+  });
 })();
 </script>
 </body>
