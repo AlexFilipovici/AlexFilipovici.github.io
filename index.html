@@ -237,7 +237,8 @@ em{font-style:italic}
   .hero__inner{grid-template-columns:1fr}
   .portrait{order:-1;width:min(62vw,270px);margin-inline:0 auto}
   .portrait__dim{display:none}
-  .portrait__now{left:auto;right:-60px;bottom:18px}
+  .portrait::before{bottom:auto;aspect-ratio:4/5}
+  .portrait__now{position:relative;left:auto;bottom:auto;width:max-content;max-width:100%;margin-top:1.75rem}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
