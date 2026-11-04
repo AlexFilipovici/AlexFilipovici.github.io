@@ -1,882 +1,1178 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="ETENA Tech s.r.o. - Expert SharePoint & Power Platform solutions for enterprises. Custom development, architecture consulting, Power Automate workflows, and modern web applications. English consultancy services across Europe.">
-    <meta name="keywords" content="SharePoint development, Power Platform, Power Automate, SharePoint consulting, enterprise solutions, SPFx, Microsoft 365, business process automation, Czech Republic, English consultancy">
-    <meta name="author" content="ETENA Tech s.r.o.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.etenatech.com">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.etenatech.com">
-    <meta property="og:title" content="ETENA Tech s.r.o. - Enterprise SharePoint & Power Platform Solutions">
-    <meta property="og:description" content="Transform your enterprise with expert SharePoint & Power Platform solutions. Custom development, architecture consulting, and automation workflows delivered in English across Europe.">
-    <meta property="og:image" content="https://www.etenatech.com/images/og-image.jpg">
-    <meta property="og:site_name" content="ETENA Tech s.r.o.">
-
-    <!-- Twitter Card -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.etenatech.com">
-    <meta property="twitter:title" content="ETENA Tech s.r.o. - Enterprise SharePoint & Power Platform Solutions">
-    <meta property="twitter:description" content="Transform your enterprise with expert SharePoint & Power Platform solutions. Custom development, architecture consulting, and automation workflows delivered in English across Europe.">
-    <meta property="twitter:image" content="https://www.etenatech.com/images/twitter-card.jpg">
-
-    <!-- Additional SEO -->
-    <meta name="theme-color" content="#0078D4">
-    <meta name="msapplication-TileColor" content="#0078D4">
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <title>ETENA Tech s.r.o. - Enterprise SharePoint & Power Platform Solutions</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #2F2F2F;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0078D4 0%, #5B2E91 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        .nav-cta {
-            background: #107C10;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .nav-cta:hover {
-            background: #0c5c0c;
-            opacity: 1;
-        }
-
-        main {
-            margin-top: 80px;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 120, 212, 0.8), rgba(91, 46, 145, 0.8)), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 6rem 2rem;
-            text-align: center;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .hero .subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #E1E1E1;
-            font-weight: 300;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1.2rem 2.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            text-align: center;
-        }
-
-        .cta-primary {
-            background: #107C10;
-            color: white;
-        }
-
-        .cta-primary:hover {
-            background: #0c5c0c;
-            transform: translateY(-2px);
-        }
-
-        .cta-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .cta-secondary:hover {
-            background: white;
-            color: #0078D4;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            padding: 5rem 0;
-        }
-
-        .section h2 {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            color: #2F2F2F;
-            font-weight: 600;
-        }
-
-        .section .subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #605E5C;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .benefit-item {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: all 0.3s;
-            border-top: 5px solid #00BCF2;
-            position: relative;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-card img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 1.5rem;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .service-card h3 {
-            color: #0078D4;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .service-card p {
-            margin-bottom: 1.5rem;
-            color: #605E5C;
-        }
-
-        .service-features {
-            list-style: none;
-            text-align: left;
-            margin: 1rem 0;
-        }
-
-        .service-features li {
-            padding: 0.3rem 0;
-            color: #2F2F2F;
-        }
-
-        .service-features li:before {
-            content: "✓";
-            color: #107C10;
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        .testimonials {
-            background: #F8F9FA;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .testimonial {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: #605E5C;
-        }
-
-        .testimonial-author {
-            font-weight: bold;
-            color: #0078D4;
-        }
-
-        .about {
-            background: #F3F2F1;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-top: 2rem;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            color: #605E5C;
-        }
-
-        .about-text h3 {
-            color: #0078D4;
-            margin: 1.5rem 0 0.5rem 0;
-            font-size: 1.3rem;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact {
-            background: #2F2F2F;
-            color: white;
-        }
-
-        .contact h2 {
-            color: white;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-            align-items: start;
-        }
-
-        .contact-form {
-            background: #3F3F3F;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .contact-form h3 {
-            color: #00BCF2;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #E1E1E1;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 5px;
-            background: #4F4F4F;
-            color: white;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: 2px solid #00BCF2;
-        }
-
-        .contact-info {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .contact-info h3 {
-            color: #00BCF2;
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-
-        .contact-info p {
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            background: #004578;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-
-            .services {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Filipovici | Principal Software Engineer · SharePoint &amp; Microsoft 365</title>
+<meta name="description" content="Principal Software Engineer specialising in SharePoint, Microsoft 365 and enterprise web applications. 25+ years of experience. Open to consulting and advisory.">
+<meta name="author" content="Alex Filipovici">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F2EC">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="canonical" href="https://alexfilipovici.cz/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Alex Filipovici">
+<meta property="og:title" content="Alex Filipovici | Principal Software Engineer · SharePoint &amp; Microsoft 365">
+<meta property="og:description" content="I turn complex business requirements into maintainable applications on SharePoint and Microsoft 365. 25+ years of experience. Open to consulting and advisory.">
+<meta property="og:url" content="https://alexfilipovici.cz/">
+<meta property="og:image" content="https://alexfilipovici.cz/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portrait of Alex Filipovici with the text: Principal Software Engineer, SharePoint and Microsoft 365">
+<meta property="og:locale" content="en_GB">
+<meta property="profile:first_name" content="Alex">
+<meta property="profile:last_name" content="Filipovici">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alex Filipovici | Principal Software Engineer">
+<meta name="twitter:description" content="SharePoint, Microsoft 365 and enterprise web applications. Open to consulting and advisory.">
+<meta name="twitter:image" content="https://alexfilipovici.cz/og-image.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script>
+(function () {
+  var root = document.documentElement, t = null;
+  try { t = localStorage.getItem('theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') {
+    t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  root.setAttribute('data-theme', t);
+  root.classList.add('js');
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "inLanguage": "en",
+  "url": "https://alexfilipovici.cz/",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://alexfilipovici.cz/#alex",
+    "name": "Alex Filipovici",
+    "givenName": "Alex",
+    "familyName": "Filipovici",
+    "url": "https://alexfilipovici.cz/",
+    "image": "https://alexfilipovici.cz/assets/alex-filipovici-717.webp",
+    "jobTitle": "Principal Software Engineer",
+    "description": "Principal Software Engineer specialising in business applications built on SharePoint and Microsoft 365, from solution architecture and single-page applications to API integration, workflow automation and technical consultancy.",
+    "address": { "@type": "PostalAddress", "addressCountry": "CZ" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Romanian-American University" },
+    "knowsLanguage": ["English", "Romanian", "Spanish", "Czech"],
+    "knowsAbout": [
+      "SharePoint Online", "Microsoft 365", "SharePoint Framework (SPFx)", "Microsoft Graph",
+      "Solution architecture", "Single-page applications", "Vue.js", "TypeScript", "C#", ".NET",
+      "REST APIs", "Power Automate", "Azure Logic Apps", "Workflow automation", "Technical consultancy"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/alexfilipovici/",
+      "https://github.com/AlexFilipovici",
+      "https://stackoverflow.com/users/674700/alex-filipovici",
+      "https://sharepoint.stackexchange.com/users/13225/alex-filipovici"
+    ]
+  }
+}
+</script>
+
+<style>
+/* ---------- Fonts (self-hosted, SIL OFL) ---------- */
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url(assets/fonts/fraunces-latin-wght-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Inter";src:url(assets/fonts/inter-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(assets/fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");font-weight:100 800;font-style:normal;font-display:swap}
+
+/* ---------- Tokens ---------- */
+:root{
+  --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;
+  --radius:20px;
+  --radius-sm:12px;
+  --maxw:1120px;
+  --header-h:68px;
+}
+[data-theme="light"]{
+  color-scheme:light;
+  --bg:#F5F2EC; --bg-alt:#EDE9E0; --surface:#FBFAF6; --surface-2:#FFFFFF;
+  --ink:#0E1A2B; --ink-2:#2B3A4F; --muted:#4D5B6E;
+  --line:#D6D0C2; --line-strong:#B9B2A1;
+  --grid:rgba(14,26,43,.05); --grid-major:rgba(14,26,43,.09); --grid-hi:rgba(11,110,131,.38);
+  --accent:#0B6E83; --accent-ink:#FFFFFF; --accent-soft:#D5E9EE; --accent-text:#0A6074;
+  --warm:#9A4A15;
+  --shadow:0 1px 0 rgba(14,26,43,.04),0 18px 40px -18px rgba(14,26,43,.28);
+  --header-bg:rgba(245,242,236,.86);
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0A1522; --bg-alt:#0D1A2A; --surface:#101F31; --surface-2:#142740;
+  --ink:#EAF0F7; --ink-2:#C9D4E2; --muted:#A3B1C3;
+  --line:#243850; --line-strong:#38526E;
+  --grid:rgba(160,200,230,.05); --grid-major:rgba(160,200,230,.09); --grid-hi:rgba(92,200,215,.42);
+  --accent:#5CC8D7; --accent-ink:#04202A; --accent-soft:#12303F; --accent-text:#7AD6E3;
+  --warm:#F0A56B;
+  --shadow:0 18px 40px -18px rgba(0,0,0,.7);
+  --header-bg:rgba(10,21,34,.86);
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 16px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0}
+a{color:var(--accent-text);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+::selection{background:var(--accent);color:var(--accent-ink)}
+.i{width:1.25rem;height:1.25rem;flex:none}
+.sr-only{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.wrap{width:min(100% - 2.5rem,var(--maxw));margin-inline:auto}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:100;background:var(--accent);color:var(--accent-ink);padding:.75rem 1.1rem;border-radius:10px;font-weight:600;text-decoration:none;transition:top .2s}
+.skip:focus{top:1rem}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg);background:var(--header-bg);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--header-h)}
+.brand{display:inline-flex;align-items:center;gap:.7rem;color:var(--ink);text-decoration:none;font:600 1.05rem/1 var(--font-body);letter-spacing:-.01em}
+.brand__mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--accent);color:var(--accent-ink);font:600 1.05rem/1 var(--font-display);letter-spacing:-.02em}
+.nav ul{list-style:none;display:flex;gap:.25rem}
+.nav a{display:block;padding:.55rem .8rem;border-radius:999px;color:var(--ink-2);text-decoration:none;font-size:.92rem;font-weight:500;transition:background .2s,color .2s}
+.nav a:hover{background:var(--accent-soft);color:var(--ink)}
+.nav a[aria-current="true"]{background:var(--accent-soft);color:var(--accent-text);font-weight:600}
+.header-actions{display:flex;align-items:center;gap:.5rem}
+.icon-btn{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s}
+.icon-btn:hover{background:var(--accent-soft);border-color:var(--accent)}
+.icon-btn .i-sun{display:none}
+[data-theme="dark"] .icon-btn .i-sun{display:block}
+[data-theme="dark"] .icon-btn .i-moon{display:none}
+.menu-btn{display:none}
+.menu-btn .i-close{display:none}
+.menu-btn[aria-expanded="true"] .i-open{display:none}
+.menu-btn[aria-expanded="true"] .i-close{display:block}
+
+@media (max-width:1019px){
+  .js .menu-btn{display:inline-grid}
+  .js .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);padding:.75rem 1.25rem 1.25rem;box-shadow:var(--shadow)}
+  .js .nav.is-open{display:block}
+  .nav ul{flex-direction:column}
+  .nav a{padding:.85rem 1rem;font-size:1rem}
+  html:not(.js) .site-header__inner{flex-wrap:wrap;padding-block:.5rem}
+  html:not(.js) .nav ul{flex-wrap:wrap}
+}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:48px;padding:.75rem 1.4rem;border-radius:999px;border:1.5px solid transparent;font:600 .98rem/1.1 var(--font-body);text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s,color .2s}
+.btn--primary{background:var(--accent);color:var(--accent-ink)}
+.btn--primary:hover{transform:translateY(-2px);box-shadow:0 14px 26px -14px var(--accent)}
+.btn--ghost{border-color:var(--line-strong);color:var(--ink);background:transparent}
+.btn--ghost:hover{border-color:var(--accent);background:var(--accent-soft)}
+
+/* ---------- Typography helpers ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:.8rem;font:500 .8125rem/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:currentColor}
+h2{font:500 clamp(2rem,4.2vw,3.1rem)/1.08 var(--font-display);letter-spacing:-.025em;margin-top:1rem;text-wrap:balance}
+h3{font-family:var(--font-display);font-weight:500;letter-spacing:-.015em}
+em{font-style:italic}
+.lead{font-size:1.2rem;line-height:1.6;color:var(--ink-2);max-width:42rem;margin-top:1.25rem}
+
+/* ---------- Sections ---------- */
+.section{padding-block:clamp(4rem,8vw,7rem)}
+.section--alt{background:var(--bg-alt);border-block:1px solid var(--line)}
+.section-head{margin-bottom:clamp(2rem,4vw,3.5rem)}
+
+/* ---------- Reveal ---------- */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+.js .reveal.is-visible{opacity:1;transform:none}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:clip;padding-block:clamp(2.5rem,6vw,5rem) clamp(3.5rem,7vw,6rem);--mx:72%;--my:36%}
+.hero__grid{position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--grid-major) 1px,transparent 1px),linear-gradient(90deg,var(--grid-major) 1px,transparent 1px),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:160px 160px,160px 160px,32px 32px,32px 32px;
+  -webkit-mask-image:linear-gradient(#000 40%,transparent);mask-image:linear-gradient(#000 40%,transparent)}
+.hero__grid--hi{
+  background-image:linear-gradient(var(--grid-hi) 1px,transparent 1px),linear-gradient(90deg,var(--grid-hi) 1px,transparent 1px);
+  background-size:32px 32px;
+  -webkit-mask-image:radial-gradient(300px circle at var(--mx) var(--my),#000,transparent 72%);mask-image:radial-gradient(300px circle at var(--mx) var(--my),#000,transparent 72%)}
+.hero__inner{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.badge{display:inline-flex;align-items:center;gap:.65rem;padding:.5rem 1rem .5rem .85rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);font:500 .875rem/1.2 var(--font-body);color:var(--ink-2)}
+.badge__dot{position:relative;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.badge__dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--accent);opacity:0;animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.8}80%,100%{transform:scale(1.4);opacity:0}}
+.hero h1{font:500 clamp(3.2rem,8.4vw,6.4rem)/.95 var(--font-display);letter-spacing:-.04em;margin-top:1.5rem;font-variation-settings:"opsz" 144}
+.hero__role{margin-top:1.25rem;font:500 .8125rem/1.6 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hero__statement{margin-top:1.75rem;text-wrap:pretty;font-size:clamp(1.25rem,2.3vw,1.6rem);line-height:1.45;color:var(--ink);max-width:34rem;font-weight:400;letter-spacing:-.01em}
+.hero__statement em{font-family:var(--font-display);color:var(--accent-text);font-weight:500}
+.hero__summary{margin-top:1rem;text-wrap:pretty;color:var(--ink-2);max-width:36rem}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+.stats{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:1.5rem clamp(1.5rem,4vw,3rem);margin-top:2.75rem;padding-top:1.75rem;border-top:1px solid var(--line-strong)}
+.stats div{display:flex;flex-direction:column-reverse;gap:.25rem}
+.stats dd{font:500 clamp(1.8rem,3.4vw,2.4rem)/1 var(--font-display);letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}
+.stats dt{font:500 .75rem/1.35 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);max-width:11rem}
+
+.portrait{position:relative;width:min(100%,380px);margin-inline:auto;isolation:isolate}
+.portrait::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);border:1.5px solid var(--accent);border-radius:999px 999px 28px 28px;z-index:-1}
+.portrait__frame{position:relative;aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;background:var(--surface-2);box-shadow:var(--shadow)}
+.portrait__frame img{width:100%;height:100%;object-fit:cover}
+.portrait__now{position:absolute;left:-22px;bottom:34px;max-width:15rem;padding:.8rem 1.1rem;border-radius:14px;border:1px solid var(--line);background:var(--surface-2);box-shadow:var(--shadow);font-size:.9rem;line-height:1.35}
+.portrait__now small{display:block;font:500 .6875rem/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text);margin-bottom:.4rem}
+.portrait__now strong{display:block;font-weight:600}
+.portrait__now span{color:var(--muted)}
+.portrait__dim{position:absolute;left:-34px;top:6%;bottom:32%;width:12px;border-left:1.5px solid var(--line-strong);display:flex;align-items:center}
+.portrait__dim::before,.portrait__dim::after{content:"";position:absolute;left:-7px;width:12px;height:1.5px;background:var(--line-strong)}
+.portrait__dim::before{top:0}.portrait__dim::after{bottom:0}
+.portrait__dim span{position:absolute;left:-26px;writing-mode:vertical-rl;transform:rotate(180deg);font:500 .6875rem/1 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;background:var(--bg);padding-block:.6rem}
+
+@media (max-width:1199px){.portrait__dim{display:none}}
+@media (max-width:899px){
+  .hero__inner{grid-template-columns:1fr}
+  .portrait{order:-1;width:min(62vw,270px);margin-inline:0 auto}
+  .portrait__dim{display:none}
+  .portrait__now{left:auto;right:-60px;bottom:18px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.about__text p:not(.eyebrow){margin-top:1.25rem;color:var(--ink-2);max-width:40rem}
+.about__text h2+p{margin-top:1.75rem}
+.glance{padding:1.75rem;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+.glance h3{font-size:1.15rem;margin-bottom:.5rem}
+.glance dl>div{padding:.9rem 0;border-top:1px solid var(--line)}
+.glance dl>div:first-child{border-top:0}
+.glance dt{font:500 .72rem/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text);margin-bottom:.4rem}
+.glance dd{color:var(--ink);font-size:.98rem;line-height:1.5}
+.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-top:clamp(2.5rem,5vw,4rem);list-style:none}
+.principle{padding:1.6rem;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);transition:transform .25s,border-color .25s}
+.principle:hover{transform:translateY(-4px);border-color:var(--accent)}
+.principle__no{font:500 .8rem/1 var(--font-mono);letter-spacing:.14em;color:var(--accent-text)}
+.principle h3{font-size:1.35rem;margin-top:.9rem}
+.principle p{margin-top:.6rem;color:var(--ink-2);font-size:.98rem}
+@media (max-width:899px){.about{grid-template-columns:1fr}.principles{grid-template-columns:1fr}}
+
+/* ---------- Expertise: layered stack ---------- */
+.stack{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(1.75rem,4vw,3.5rem);align-items:start}
+.stack__nav{display:grid;gap:.7rem;position:sticky;top:calc(var(--header-h) + 24px);padding:0 6px 6px 0}
+.layer{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.9rem;width:100%;padding:.9rem 1.1rem;border-radius:14px;border:1.5px solid var(--line-strong);background:var(--surface);color:var(--ink);text-align:left;font:600 .98rem/1.25 var(--font-body);cursor:pointer;box-shadow:5px 5px 0 var(--line);transition:transform .2s,box-shadow .2s,background .2s,border-color .2s,color .2s}
+.layer:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--accent-soft);border-color:var(--accent)}
+.layer[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);box-shadow:5px 5px 0 var(--accent-soft)}
+.layer__no{font:500 .75rem/1 var(--font-mono);letter-spacing:.1em;opacity:.8}
+.layer__count{font:500 .75rem/1 var(--font-mono);padding:.3rem .55rem;border-radius:999px;background:var(--accent-soft);color:var(--accent-text)}
+.layer[aria-pressed="true"] .layer__count{background:rgba(255,255,255,.22);color:var(--accent-ink)}
+[data-theme="dark"] .layer[aria-pressed="true"] .layer__count{background:rgba(4,32,42,.18)}
+.stack__panels{display:grid;gap:1rem}
+.panel{padding:1.6rem 1.75rem;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface)}
+.panel[hidden]{display:none}
+.panel.is-entering{animation:panelIn .45s ease both}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel__no{font:500 .75rem/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.panel h3{font-size:1.5rem;margin-top:.6rem}
+.panel p{margin-top:.5rem;color:var(--ink-2);font-size:1rem;max-width:36rem}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.1rem}
+.chip{font:500 .8125rem/1.2 var(--font-mono);padding:.5rem .8rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface-2);color:var(--ink-2)}
+.chip--core{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-text);font-weight:600}
+.legend{margin-top:1.5rem;font:500 .78rem/1.4 var(--font-mono);letter-spacing:.04em;color:var(--muted);display:flex;align-items:center;gap:.6rem}
+.legend::before{content:"";width:1.6rem;height:.9rem;border-radius:999px;border:1px solid var(--accent);background:var(--accent-soft)}
+@media (max-width:859px){
+  .stack{grid-template-columns:1fr}
+  .stack__nav{position:static;display:flex;gap:.7rem;overflow-x:auto;padding:0 10px 14px 0;margin-right:-1.25rem;scroll-snap-type:x proximity}
+  .layer{flex:none;width:auto;grid-template-columns:auto auto;gap:.7rem;white-space:nowrap;scroll-snap-align:start}
+  .layer__no{display:none}
+}
+
+/* ---------- Approach: process ---------- */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1.25rem;position:relative}
+.step{position:relative;min-width:0}
+.step::before,.step::after{content:"";position:absolute;top:21px;left:50px;right:-1.25rem;height:2px;border-radius:2px}
+.step::after{background:var(--line-strong)}
+.step::before{background:var(--accent);z-index:1;transform:scaleX(0);transform-origin:left;transition:transform .5s ease;transition-delay:calc(var(--i)*.32s + .25s)}
+.step:last-child::before,.step:last-child::after{display:none}
+.steps.is-in .step::before{transform:scaleX(1)}
+.step__node{position:relative;z-index:2;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:2px solid var(--line-strong);background:var(--bg);font:600 .85rem/1 var(--font-mono);color:var(--muted);transition:background .4s,border-color .4s,color .4s,transform .4s;transition-delay:calc(var(--i)*.32s)}
+.section--alt .step__node{background:var(--bg-alt)}
+.steps.is-in .step__node{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.step__body{margin-top:1.25rem;padding-right:.5rem}
+.step h3{font-size:1.3rem}
+.step p{margin-top:.5rem;font-size:.95rem;line-height:1.55;color:var(--ink-2)}
+.approach-note{margin-top:3rem;padding:1.4rem 1.6rem;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 var(--radius-sm) var(--radius-sm) 0;max-width:46rem;color:var(--ink-2)}
+.approach-note strong{color:var(--ink)}
+@media (max-width:1099px){
+  .steps{grid-template-columns:1fr;gap:1.75rem;max-width:44rem}
+  .step{padding-left:68px;min-height:44px}
+  .step__node{position:absolute;left:0;top:0}
+  .step__body{margin-top:0;padding-top:.15rem}
+  .step::before,.step::after{top:50px;bottom:-1.75rem;left:21px;right:auto;width:2px;height:auto}
+  .step::before{transform:scaleY(0);transform-origin:top}
+  .steps.is-in .step::before{transform:scaleY(1)}
+}
+
+/* Without JavaScript: show the finished state, hide dead controls */
+html:not(.js) .step::before{transform:none}
+html:not(.js) .step__node{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+html:not(.js) .copy-btn,html:not(.js) #theme-toggle{display:none}
+
+/* ---------- Experience ---------- */
+.careerbar{margin-bottom:clamp(2.5rem,5vw,4rem);padding:1.5rem 1.5rem 1.1rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.careerbar__cap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font:500 .75rem/1.4 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.careerbar__rows{position:relative;margin-top:1rem;display:grid;gap:6px}
+.careerbar__row{position:relative;height:16px}
+.careerbar__row i{position:absolute;top:0;bottom:0;left:var(--l);width:var(--w);border-radius:4px;background:var(--line-strong);transform-origin:left;box-shadow:0 0 0 1.5px var(--surface)}
+.careerbar__row i.cb-now{background:var(--accent)}
+.careerbar__row--also i{background:transparent;border:1.5px solid var(--accent);height:100%}
+.careerbar__axis{position:relative;height:1.5rem;margin-top:.5rem;border-top:1px solid var(--line-strong)}
+.careerbar__axis span{position:absolute;top:.35rem;left:var(--l);transform:translateX(-50%);font:500 .6875rem/1 var(--font-mono);color:var(--muted)}
+.careerbar__axis span:first-child{transform:none}
+.careerbar__axis span:last-child{transform:translateX(-100%)}
+.careerbar__key{display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:.9rem;font:500 .75rem/1 var(--font-mono);color:var(--muted)}
+.careerbar__key b{display:inline-block;width:14px;height:10px;border-radius:3px;margin-right:.45rem;vertical-align:-1px;background:var(--line-strong)}
+.careerbar__key b.k-now{background:var(--accent)}
+.careerbar__key b.k-also{background:transparent;border:1.5px solid var(--accent)}
+.js .careerbar__row i{transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .careerbar.is-visible .careerbar__row i{transform:scaleX(1)}
+@media (max-width:560px){.careerbar__axis span:nth-child(2){display:none}}
+
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.role{padding:1.75rem;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+.role--lead{grid-column:1/-1;border-color:var(--accent);background:linear-gradient(135deg,var(--accent-soft),var(--surface) 55%)}
+.role__meta{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;font:500 .78rem/1.3 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.role__badge{padding:.3rem .65rem;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:600;letter-spacing:.1em}
+.role__title{font-size:clamp(1.5rem,2.6vw,2rem);margin-top:1rem;line-height:1.15}
+.role__org{margin-top:.35rem;font-weight:600;color:var(--accent-text)}
+.role p:not(.role__org){margin-top:.8rem;color:var(--ink-2);max-width:44rem}
+.prev{margin-top:clamp(2.5rem,5vw,4rem)}
+.prev h3{font-size:1.5rem}
+.tl{list-style:none;position:relative;margin-top:1.75rem;padding-left:2.25rem}
+.tl::before{content:"";position:absolute;left:7px;top:.5rem;bottom:.5rem;width:2px;background:linear-gradient(var(--accent),var(--line-strong))}
+.tl__item{position:relative;display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:.25rem 2rem;padding:0 0 1.75rem}
+.tl__item:last-child{padding-bottom:0}
+.tl__item::before{content:"";position:absolute;left:-2.25rem;top:.4rem;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);transition:background .25s,transform .25s}
+.section--alt .tl__item::before{background:var(--bg-alt)}
+.tl__item:hover::before{background:var(--accent);transform:scale(1.15)}
+.tl__date{font:500 .8rem/1.8 var(--font-mono);letter-spacing:.04em;color:var(--muted)}
+.tl__role{font:600 1.1rem/1.4 var(--font-body);letter-spacing:-.005em}
+.tl__org{color:var(--ink-2)}
+.fineprint{margin-top:2rem;font-size:.9rem;color:var(--muted);max-width:44rem}
+@media (max-width:759px){.roles{grid-template-columns:1fr}.tl__item{grid-template-columns:1fr}}
+
+/* ---------- Credentials ---------- */
+.cred{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.cred h3{font-size:1.5rem;margin-bottom:1.25rem}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;list-style:none}
+.card{padding:1.5rem;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);height:100%}
+.card--wide{grid-column:1/-1}
+.card__kind{font:500 .72rem/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.card h4{font:500 1.25rem/1.25 var(--font-display);letter-spacing:-.01em;margin-top:.8rem}
+.card p{margin-top:.4rem;color:var(--ink-2);font-size:.95rem}
+.more{margin-top:1.25rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.more summary{cursor:pointer;list-style:none;padding:1.1rem 1.4rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:1rem;border-radius:var(--radius)}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"+";font:500 1.4rem/1 var(--font-mono);color:var(--accent-text);transition:transform .25s}
+.more[open] summary::after{transform:rotate(45deg)}
+.more ul{list-style:none;padding:0 1.4rem 1.3rem;display:grid;gap:.8rem}
+.more li{color:var(--ink-2);font-size:.95rem;padding-left:1.1rem;position:relative}
+.more li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.langs{list-style:none;display:grid;gap:1rem}
+.lang{padding:1.1rem 1.25rem;border-radius:var(--radius-sm);border:1px solid var(--line);background:var(--surface)}
+.lang__top{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.lang strong{font:500 1.2rem/1.2 var(--font-display)}
+.lang__level{font-size:.88rem;color:var(--muted);text-align:right}
+.meter{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:.8rem}
+.meter i{height:6px;border-radius:3px;background:var(--line)}
+.meter i.on{background:var(--accent)}
+@media (max-width:899px){.cred{grid-template-columns:1fr}}
+@media (max-width:540px){.cards{grid-template-columns:1fr}}
+
+/* ---------- Community ---------- */
+.community{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:1.25rem;align-items:stretch}
+.net{padding:clamp(1.5rem,3vw,2.25rem);border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+.net--primary{border-color:var(--accent)}
+.net__head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap}
+.net h3{font-size:1.6rem}
+.net__sub{margin-top:.3rem;color:var(--muted);font-size:.92rem}
+.net__link{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;font-size:.95rem;white-space:nowrap}
+.netstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:1.75rem}
+.netstats--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.netstats div{display:flex;flex-direction:column-reverse;gap:.3rem}
+.netstats dd{font:500 clamp(1.7rem,3vw,2.3rem)/1 var(--font-display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.netstats dt{font:500 .72rem/1.35 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.medals{display:flex;flex-wrap:wrap;gap:.6rem 1.25rem;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--line);list-style:none;font:500 .85rem/1 var(--font-mono);color:var(--ink-2)}
+.medals li{display:inline-flex;align-items:center;gap:.5rem}
+.medals i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.m-gold{background:#D4A017}.m-silver{background:#9AA5B1}.m-bronze{background:#B9722F}
+.net h4{font:600 .78rem/1 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text);margin-top:1.75rem}
+.answers{list-style:none;margin-top:.5rem}
+.answers li{display:grid;grid-template-columns:3.5rem 1fr;gap:1rem;align-items:baseline;padding:.8rem 0;border-top:1px solid var(--line)}
+.answers li:first-child{border-top:0}
+.answers b{font:600 1rem/1 var(--font-mono);color:var(--accent-text);font-variant-numeric:tabular-nums}
+.answers a{color:var(--ink);font-weight:500;text-decoration-color:var(--line-strong)}
+.answers a:hover{color:var(--accent-text)}
+.snap{margin-top:1.25rem;font-size:.85rem;color:var(--muted)}
+.elsewhere{margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:.75rem}
+.net-col{display:grid;gap:1.25rem;grid-template-rows:auto 1fr}
+@media (max-width:959px){.community{grid-template-columns:1fr}}
+@media (max-width:560px){.netstats{grid-template-columns:repeat(2,minmax(0,1fr))}.netstats--3{grid-template-columns:repeat(3,minmax(0,1fr))}.answers li{grid-template-columns:3rem 1fr}}
+
+/* ---------- Contact ---------- */
+.contact{position:relative;overflow:clip;border-top:1px solid var(--line)}
+.contact .hero__grid{-webkit-mask-image:linear-gradient(transparent,#000);mask-image:linear-gradient(transparent,#000)}
+.contact__inner{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.contact h2{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1}
+.mail{display:block;margin-top:2rem;font:500 clamp(1.3rem,3.4vw,2.2rem)/1.2 var(--font-display);letter-spacing:-.02em;color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:2px;word-break:break-word}
+.mail:hover{color:var(--accent-text)}
+.contact__cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.75rem}
+.copy-btn .i-check{display:none}
+.copy-btn.is-done .i-check{display:block}
+.copy-btn.is-done .i-copy{display:none}
+.topics{padding:1.75rem;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow)}
+.topics h3{font-size:1.25rem}
+.topics ul{list-style:none;margin-top:1rem;display:grid;gap:.7rem}
+.topics li{position:relative;padding-left:1.6rem;color:var(--ink-2);font-size:.98rem}
+.topics li::before{content:"";position:absolute;left:0;top:.5em;width:.8rem;height:.8rem;border-radius:3px;border:1.5px solid var(--accent);background:var(--accent-soft)}
+@media (max-width:899px){.contact__inner{grid-template-columns:1fr}}
+
+/* ---------- Footer ---------- */
+.site-footer{padding-block:2.5rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.site-footer__row{display:flex;justify-content:space-between;align-items:center;gap:1rem 2rem;flex-wrap:wrap}
+.site-footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}
+.site-footer a{color:var(--ink-2)}
+.disclaimer{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--line);max-width:52rem;line-height:1.6}
+.disclaimer p+p{margin-top:.6rem}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+  .js .reveal{opacity:1;transform:none}
+  .badge__dot::after{display:none}
+}
+
+/* ---------- Print ---------- */
+@media print{
+  .site-header,.hero__grid,.icon-btn,.skip,.stack__nav,.hero__cta,.contact__cta,.copy-btn{display:none!important}
+  body{background:#fff;color:#000;font-size:11pt}
+  .js .reveal{opacity:1!important;transform:none!important}
+  .section{padding-block:1.5rem}
+  .panel[hidden]{display:block!important}
+  a{color:#000}
+}
+</style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">ETENA Tech s.r.o.</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a
-                        href="#contact"
-                        class="nav-cta"
-                    >Request Offer</a></li>
-            </ul>
-        </nav>
-    </header>
+<a class="skip" href="#main">Skip to main content</a>
 
-    <main>
-        <section
-            id="home"
-            class="hero"
-            style="background: linear-gradient(rgba(0, 120, 212, 0.7), rgba(91, 46, 145, 0.7)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed;"
-        >
-            <div class="container">
-                <h1>Transform Your Enterprise</h1>
-                <div class="subtitle">with Expert SharePoint & Power Platform Solutions</div>
-                <p>Specializing in SharePoint architecture, Power Automate workflows, and modern Single Page
-                    Applications. Delivered in English for enterprise clients across Europe - available on-site or
-                    remote.</p>
-                <div class="cta-buttons">
-                    <a
-                        href="#contact"
-                        class="cta-button cta-primary"
-                    >Request Your Custom Offer</a>
-                    <a
-                        href="#services"
-                        class="cta-button cta-secondary"
-                    >Explore Services</a>
-                </div>
-            </div>
-        </section>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></g></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
 
-        <section class="section">
-            <div class="container">
-                <div class="benefits">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🚀</div>
-                        <h3>Enterprise Ready</h3>
-                        <p>Solutions designed for large-scale enterprise environments</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">💼</div>
-                        <h3>Business Focused</h3>
-                        <p>Understanding your business needs comes first</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🌍</div>
-                        <h3>English Service</h3>
-                        <p>Professional consultancy delivered in English</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">⚡</div>
-                        <h3>Flexible Delivery</h3>
-                        <p>On-site or remote - whatever works best for you</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="#top" aria-label="Alex Filipovici, back to top">
+      <span class="brand__mark" aria-hidden="true">AF</span>
+      <span class="brand__name">Alex Filipovici</span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="i i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg>
+        <svg class="i i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg class="i i-open" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+        <svg class="i i-close" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-        <section
-            id="services"
-            class="section"
-        >
-            <div class="container">
-                <h2>Enterprise Solutions</h2>
-                <p class="subtitle">Comprehensive SharePoint and Power Platform services designed to drive your business
-                    forward</p>
-                <div class="services">
-                    <div class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="SharePoint Development"
-                        >
-                        <h3>SharePoint Development</h3>
-                        <p>Custom SharePoint solutions that integrate seamlessly with your enterprise ecosystem.</p>
-                        <ul class="service-features">
-                            <li>Custom web parts and applications</li>
-                            <li>SharePoint Framework (SPFx) solutions</li>
-                            <li>Enterprise content management</li>
-                            <li>Integration with Microsoft 365</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="SharePoint Consulting"
-                        >
-                        <h3>SharePoint Architecture & Consulting</h3>
-                        <p>Strategic guidance for scalable, secure SharePoint implementations.</p>
-                        <ul class="service-features">
-                            <li>Enterprise architecture design</li>
-                            <li>Migration strategy and planning</li>
-                            <li>Governance and compliance</li>
-                            <li>Performance optimization</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Power Automate"
-                        >
-                        <h3>Power Automate Solutions</h3>
-                        <p>Streamline your business processes with intelligent workflow automation.</p>
-                        <ul class="service-features">
-                            <li>Business process automation</li>
-                            <li>Document approval workflows</li>
-                            <li>System integration flows</li>
-                            <li>Custom connector development</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <img
-                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            alt="Single Page Applications"
-                        >
-                        <h3>Modern Single Page Applications</h3>
-                        <p>Fast, responsive web applications built with modern frameworks.</p>
-                        <ul class="service-features">
-                            <li>Vue.js applications</li>
-                            <li>Microsoft Graph integration</li>
-                            <li>Progressive Web Apps (PWA)</li>
-                            <li>Mobile-responsive design</li>
-                        </ul>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a
-                        href="#contact"
-                        class="cta-button cta-primary"
-                    >Get Your Personalized Quote</a>
-                </div>
-            </div>
-        </section>
+<main id="main">
 
-        <section class="section testimonials">
-            <div class="container">
-                <h2>What Our Clients Say</h2>
-                <p class="subtitle">Trusted by enterprise clients across Europe</p>
-                <div class="testimonial-grid">
-                    <div class="testimonial">
-                        <div class="testimonial-text">"ETENA Tech delivered exceptional SharePoint solutions that
-                            transformed our document management. Their English-speaking expertise made collaboration
-                            seamless."</div>
-                        <div class="testimonial-author">- Enterprise Client, Germany</div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-text">"The Power Automate workflows they implemented saved us countless
-                            hours and significantly improved our business processes."</div>
-                        <div class="testimonial-author">- IT Director, Multinational Corp</div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-text">"Professional, reliable, and results-driven. Their remote
-                            consultancy model worked perfectly for our international team."</div>
-                        <div class="testimonial-author">- Project Manager, Czech Republic</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section
-            id="about"
-            class="section about"
-        >
-            <div class="container">
-                <h2>About ETENA Tech</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-ETENA Tech delivers enterprise-grade SharePoint architecture and Power Automate solutions that eliminate workflow bottlenecks and drive measurable productivity gains.
-                        </p>
-                        <p>
-Founded by Alex Filipovici - a seasoned SharePoint architect with deep experience in complex enterprise environments - we specialize in turning Microsoft 365 investments into competitive advantages.
-                        </p>
-
-                        <h3>Our Approach</h3>
-                        <p>
-We don't just implement technology. We diagnose business challenges, design scalable solutions, and ensure your teams adopt them successfully. From content management overhauls to intelligent automation workflows, we deliver solutions that work in the real world.
-                        </p>
-
-                        <h3>Enterprise - First Service</h3>
-                        <p>
-                            Based in Prague and serving clients across Europe, we provide English-language consultancy with the flexibility enterprise projects demand—whether on-site for critical launches or remote for ongoing optimization.
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="Enterprise SharePoint Solutions"
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section
-            id="contact"
-            class="section contact"
-        >
-            <div class="container">
-                <h2>Ready to Transform Your Enterprise?</h2>
-                <p
-                    class="subtitle"
-                    style="color: #E1E1E1;"
-                >Let's discuss your specific requirements and create a tailored solution for your business</p>
-
-                <div class="contact-content">
-                    <div class="contact-form">
-                        <h3>Request Your Custom Offer</h3>
-                        <form
-                            action="https://usebasin.com/f/d84ea63dec0b"
-                            method="POST"
-                            enctype="multipart/form-data"
-                            id="form"
-                        >
-                            <div class="form-group">
-                                <label for="company">Company Name *</label>
-                                <input
-                                    type="text"
-                                    id="company"
-                                    name="company"
-                                    required
-                                >
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Your Name *</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    required
-                                >
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                >
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Service Interest</label>
-                                <select
-                                    id="service"
-                                    name="service"
-                                >
-                                    <option value="">Select a service</option>
-                                    <option value="sharepoint-dev">SharePoint Development</option>
-                                    <option value="sharepoint-consulting">SharePoint Architecture & Consulting</option>
-                                    <option value="power-automate">Power Automate Solutions</option>
-                                    <option value="spa">Single Page Applications</option>
-                                    <option value="multiple">Multiple Services</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Project Details</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows="4"
-                                    placeholder="Tell us about your project requirements, timeline, and any specific challenges you're facing..."
-                                ></textarea>
-                            </div>
-                            <button
-                                type="submit"
-                                class="cta-button cta-primary"
-                                style="width: 100%; margin-top: 1rem;"
-                            >Send Request for Offer</button>
-                        </form>
-                    </div>
-
-                    <div class="contact-info">
-                        <div>
-                            <h3>Direct Contact</h3>
-                            <p><strong>Email:</strong> info@etenatech.com</p>
-                            <p>We respond to all inquiries within 24 hours during business days.</p>
-                        </div>
-                        <div>
-                            <h3>Service Delivery</h3>
-                            <p><strong>On-site Consultancy:</strong> Available across Europe</p>
-                            <p><strong>Remote Consultancy:</strong> Worldwide via secure platforms</p>
-                            <p><strong>Languages:</strong> Professional services in English</p>
-                        </div>
-                        <div>
-                            <h3>Company Location</h3>
-                            <p><strong>ETENA Tech s.r.o.</strong><br>
-                                Prague, Czech Republic</p>
-                            <p>European time zone for optimal collaboration with enterprise clients.</p>
-                        </div>
-                        <div>
-                            <h3>Next Steps</h3>
-                            <p>1. Submit your request<br>
-                                2. Initial consultation call<br>
-                                3. Detailed proposal<br>
-                                4. Project kickoff</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> ETENA Tech s.r.o. - Enterprise SharePoint & Power Platform
-                Solutions. All rights reserved.</p>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__grid hero__grid--hi" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="badge"><span class="badge__dot" aria-hidden="true"></span>Open to consulting &amp; advisory</p>
+        <h1 id="hero-title">Alex Filipovici</h1>
+        <p class="hero__role">Principal Software Engineer · SharePoint &amp; Microsoft 365 · Enterprise Web Applications</p>
+        <p class="hero__statement">I turn complex business requirements into <em>maintainable</em> applications and clear user experiences on SharePoint and Microsoft 365.</p>
+        <p class="hero__summary">Based in Czechia, working with teams across Europe. Solution architecture, single-page applications, API integration, workflow automation and technical consultancy, with hands-on engineering at the centre.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="mailto:admin@alexfilipovici.cz?subject=Enquiry%20from%20alexfilipovici.cz">
+            <svg class="i" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Get in touch
+          </a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/alexfilipovici/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>
         </div>
-    </footer>
+        <dl class="stats">
+          <div><dt>Years in IT</dt><dd><span data-count="25" data-suffix="+">25+</span></dd></div>
+          <div><dt>Working with SharePoint since</dt><dd>2010</dd></div>
+          <div><dt>Stack Overflow reputation</dt><dd><span data-count="32.8" data-decimals="1" data-suffix="k">32.8k</span></dd></div>
+          <div><dt>Developers reached</dt><dd><span data-count="4" data-decimals="1" data-suffix="M">4.0M</span></dd></div>
+        </dl>
+      </div>
 
+      <figure class="portrait">
+        <div class="portrait__dim" aria-hidden="true"><span>Alex Filipovici · Fig. 01</span></div>
+        <div class="portrait__frame">
+          <img src="assets/alex-filipovici-717.webp"
+               srcset="assets/alex-filipovici-360.webp 360w, assets/alex-filipovici-717.webp 717w"
+               sizes="(min-width: 900px) 380px, 62vw"
+               width="717" height="896" alt="Portrait of Alex Filipovici" fetchpriority="high" decoding="async">
+        </div>
+        <figcaption class="portrait__now">
+          <small>Currently</small>
+          <strong>Principal Software Engineer</strong>
+          <span>DHL IT Services</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
 
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="about">
+        <div class="about__text reveal">
+          <p class="eyebrow"><span aria-hidden="true">01 /</span> About</p>
+          <h2 id="about-title">Hands-on, with the bigger picture in view.</h2>
+          <p>I'm a Principal Software Engineer specialising in business applications built on SharePoint and Microsoft 365. My experience spans solution architecture, front-end and back-end development, single-page applications, workflow automation, API integration and data platforms, plus technical consultancy when a team needs an experienced second opinion.</p>
+          <p>Today I combine hands-on engineering with architecture and requirements clarification, always keeping maintainability, security and the full application lifecycle in mind. I enjoy turning complex business needs into software that is clear to use and sustainable to run.</p>
+        </div>
+        <aside class="glance reveal" style="--d:.12s" aria-labelledby="glance-title">
+          <h3 id="glance-title">At a glance</h3>
+          <dl>
+            <div><dt>Role</dt><dd>Principal Software Engineer</dd></div>
+            <div><dt>Focus</dt><dd>SharePoint Online, Microsoft 365, modern web development, APIs and process automation</dd></div>
+            <div><dt>Based in</dt><dd>Czechia, working with teams across Europe</dd></div>
+            <div><dt>Open to</dt><dd>Consulting and advisory engagements</dd></div>
+          </dl>
+        </aside>
+      </div>
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+      <ul class="principles">
+        <li class="principle reveal">
+          <span class="principle__no" aria-hidden="true">A</span>
+          <h3>Clarity before code</h3>
+          <p>Requirements clarification and honest stakeholder conversations come first, so the right problem gets solved.</p>
+        </li>
+        <li class="principle reveal" style="--d:.1s">
+          <span class="principle__no" aria-hidden="true">B</span>
+          <h3>Maintainable by design</h3>
+          <p>Readable code and sensible architecture, so applications stay healthy long after go-live.</p>
+        </li>
+        <li class="principle reveal" style="--d:.2s">
+          <span class="principle__no" aria-hidden="true">C</span>
+          <h3>Secure and supportable</h3>
+          <p>Security, access design and lifecycle considerations are part of the design, not an afterthought.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-        // Form submission feedback
-        function showFormFeedback(message, type = 'success') {
-            // Remove any existing feedback
-            const existingFeedback = document.querySelector('.form-feedback');
-            if (existingFeedback) {
-            existingFeedback.remove();
-            }
-            
-            // Create feedback element
-            const feedback = document.createElement('div');
-            feedback.className = `form-feedback ${type}`;
-            feedback.innerHTML = `
-            <div class="feedback-icon">${type === 'success' ? '✓' : '⚠'}</div>
-            <div class="feedback-message">${message}</div>
-            `;
-            
-            // Add styles
-            feedback.style.cssText = `
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            background: ${type === 'success' ? '#107C10' : '#D83B01'};
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
-            z-index: 10000;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            max-width: 350px;
-            `;
-            
-            document.body.appendChild(feedback);
-            
-            // Animate in
-            setTimeout(() => {
-            feedback.style.transform = 'translateX(0)';
-            }, 10);
-            
-            // Auto remove after 5 seconds
-            setTimeout(() => {
-            feedback.style.transform = 'translateX(100%)';
-            setTimeout(() => feedback.remove(), 300);
-            }, 5000);
+  <!-- ============ EXPERTISE ============ -->
+  <section class="section section--alt" id="expertise" aria-labelledby="expertise-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow"><span aria-hidden="true">02 /</span> Expertise</p>
+        <h2 id="expertise-title">From pixels to platform.</h2>
+        <p class="lead">I work across every layer of a business application. Pick a layer to see the skills and tools I bring to it.</p>
+      </header>
+
+      <div class="stack reveal" data-stack>
+        <div class="stack__panels">
+          <p class="sr-only" id="stack-status" role="status" aria-live="polite"></p>
+
+          <section class="panel" data-layer="experience" aria-labelledby="l-experience">
+            <p class="panel__no" aria-hidden="true">Layer 01</p>
+            <h3 id="l-experience">Experience</h3>
+            <p>Single-page applications and front-end architecture that make complex processes feel simple.</p>
+            <ul class="chips">
+              <li class="chip chip--core">Vue.js 2 &amp; 3</li>
+              <li class="chip chip--core">JavaScript</li>
+              <li class="chip">TypeScript</li>
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">Bootstrap</li>
+              <li class="chip">Vuestic UI</li>
+              <li class="chip">Vite</li>
+              <li class="chip">jQuery</li>
+              <li class="chip chip--core">Single-page applications</li>
+              <li class="chip">Front-end architecture</li>
+            </ul>
+          </section>
+
+          <section class="panel" data-layer="application" aria-labelledby="l-application">
+            <p class="panel__no" aria-hidden="true">Layer 02</p>
+            <h3 id="l-application">Application</h3>
+            <p>Enterprise web application development on the Microsoft and Node.js stacks.</p>
+            <ul class="chips">
+              <li class="chip chip--core">C#</li>
+              <li class="chip">.NET</li>
+              <li class="chip">ASP.NET &amp; MVC</li>
+              <li class="chip chip--core">Node.js</li>
+              <li class="chip">SharePoint Client Object Model</li>
+              <li class="chip">WCF</li>
+              <li class="chip">Enterprise web applications</li>
+            </ul>
+          </section>
+
+          <section class="panel" data-layer="integration" aria-labelledby="l-integration">
+            <p class="panel__no" aria-hidden="true">Layer 03</p>
+            <h3 id="l-integration">Integration &amp; automation</h3>
+            <p>Connecting systems and automating processes with APIs, Microsoft Graph and workflow tools.</p>
+            <ul class="chips">
+              <li class="chip chip--core">Microsoft Graph</li>
+              <li class="chip chip--core">SharePoint REST APIs</li>
+              <li class="chip">REST &amp; SOAP services</li>
+              <li class="chip chip--core">Power Automate</li>
+              <li class="chip chip--core">Azure Logic Apps</li>
+              <li class="chip">Workflow &amp; process automation</li>
+            </ul>
+          </section>
+
+          <section class="panel" data-layer="data" aria-labelledby="l-data">
+            <p class="panel__no" aria-hidden="true">Layer 04</p>
+            <h3 id="l-data">Data &amp; documents</h3>
+            <p>Data platforms and document management solutions.</p>
+            <ul class="chips">
+              <li class="chip">SQL Server</li>
+              <li class="chip">SSIS</li>
+              <li class="chip">SSAS</li>
+              <li class="chip">Data &amp; document management</li>
+            </ul>
+          </section>
+
+          <section class="panel" data-layer="platform" aria-labelledby="l-platform">
+            <p class="panel__no" aria-hidden="true">Layer 05</p>
+            <h3 id="l-platform">Platform</h3>
+            <p>SharePoint and Microsoft 365 at the core, from legacy on-premises farms to SharePoint Online.</p>
+            <ul class="chips">
+              <li class="chip chip--core">SharePoint Online</li>
+              <li class="chip">SharePoint Framework (SPFx)</li>
+              <li class="chip">Microsoft 365</li>
+              <li class="chip">SharePoint 2007 · 2010 · 2013</li>
+              <li class="chip">Security &amp; access design</li>
+              <li class="chip">Modernization &amp; migration</li>
+            </ul>
+          </section>
+
+          <section class="panel" data-layer="delivery" aria-labelledby="l-delivery">
+            <p class="panel__no" aria-hidden="true">Layer 06</p>
+            <h3 id="l-delivery">Architecture &amp; delivery</h3>
+            <p>The practices and tools that keep projects clear, collaborative and on track.</p>
+            <ul class="chips">
+              <li class="chip">Solution architecture</li>
+              <li class="chip">Technical consultancy &amp; architecture reviews</li>
+              <li class="chip">Requirements &amp; stakeholder collaboration</li>
+              <li class="chip chip--core">GitHub</li>
+              <li class="chip">Visual Studio Code</li>
+              <li class="chip">Visual Studio</li>
+              <li class="chip">npm</li>
+            </ul>
+          </section>
+
+          <p class="legend">Highlighted: core strengths</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APPROACH ============ -->
+  <section class="section" id="approach" aria-labelledby="approach-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow"><span aria-hidden="true">03 /</span> Approach</p>
+        <h2 id="approach-title">From first conversation to long-term support.</h2>
+        <p class="lead">I stay involved across the whole lifecycle, so decisions made early are still sound when the application is live.</p>
+      </header>
+
+      <ol class="steps" data-steps>
+        <li class="step" style="--i:0">
+          <span class="step__node" aria-hidden="true">01</span>
+          <div class="step__body"><h3>Clarify</h3><p>Work with stakeholders until the real problem, constraints and success criteria are clear.</p></div>
+        </li>
+        <li class="step" style="--i:1">
+          <span class="step__node" aria-hidden="true">02</span>
+          <div class="step__body"><h3>Architect</h3><p>Design the solution with security, access and maintainability considered from the start.</p></div>
+        </li>
+        <li class="step" style="--i:2">
+          <span class="step__node" aria-hidden="true">03</span>
+          <div class="step__body"><h3>Build</h3><p>Hands-on front-end and back-end development: SPAs, SharePoint solutions and enterprise web apps.</p></div>
+        </li>
+        <li class="step" style="--i:3">
+          <span class="step__node" aria-hidden="true">04</span>
+          <div class="step__body"><h3>Integrate</h3><p>REST APIs, Microsoft Graph and SharePoint REST connect the application to the systems around it.</p></div>
+        </li>
+        <li class="step" style="--i:4">
+          <span class="step__node" aria-hidden="true">05</span>
+          <div class="step__body"><h3>Automate &amp; test</h3><p>Workflows with Power Automate and Azure Logic Apps, and testing so changes ship with confidence.</p></div>
+        </li>
+        <li class="step" style="--i:5">
+          <span class="step__node" aria-hidden="true">06</span>
+          <div class="step__body"><h3>Ship &amp; support</h3><p>Release, hand-over and ongoing support, with the whole application lifecycle in mind.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section section--alt" id="experience" aria-labelledby="experience-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow"><span aria-hidden="true">04 /</span> Experience</p>
+        <h2 id="experience-title">25 years, one thread: business software that works.</h2>
+      </header>
+
+      <div class="careerbar reveal" role="img" aria-label="Career timeline bar from 2001 to today, showing a continuous career in IT from IT specialist to principal software engineer.">
+        <div class="careerbar__cap" aria-hidden="true"><span>2001 → today</span><span>IT specialist → principal software engineer</span></div>
+        <div class="careerbar__rows" aria-hidden="true">
+          <div class="careerbar__row">
+            <i style="--l:0%;--w:15.4%;--d:.05s" title="Siv'tel, 2001–2005"></i>
+            <i style="--l:26%;--w:2.2%;--d:.25s" title="Dreko Inc., 2007–2008"></i>
+            <i style="--l:28.5%;--w:7.4%;--d:.3s" title="Ubisoft, 2008–2010"></i>
+            <i style="--l:35.9%;--w:1.3%;--d:.4s" title="SIVECO Romania, 2010"></i>
+            <i style="--l:37.5%;--w:14.1%;--d:.45s" title="Wincor Nixdorf, 2010–2014"></i>
+            <i class="cb-now" style="--l:51.6%;--w:48.4%;--d:.6s" title="DHL IT Services, 2014–present"></i>
+          </div>
+          <div class="careerbar__row careerbar__row--also">
+            <i style="--l:92%;--w:8%;--d:.9s" title="ETENA Tech and SnapStack, 2024–present"></i>
+          </div>
+        </div>
+        <div class="careerbar__axis" aria-hidden="true">
+          <span style="--l:0%">2001</span><span style="--l:15.4%">2005</span><span style="--l:34.6%">2010</span><span style="--l:53.8%">2015</span><span style="--l:73.1%">2020</span><span style="--l:100%">Now</span>
+        </div>
+        <div class="careerbar__key" aria-hidden="true"><span><b></b>Earlier roles</span><span><b class="k-now"></b>Principal engineer</span><span><b class="k-also"></b>Also today</span></div>
+      </div>
+
+      <div class="roles">
+        <article class="role role--lead reveal">
+          <div class="role__meta"><span class="role__badge">Current</span><span><time datetime="2014-06">Jun 2014</time> – Present<span class="tenure" data-since="2014-06"></span></span></div>
+          <h3 class="role__title">Principal Software Engineer</h3>
+          <p class="role__org">Deutsche Post DHL · DHL IT Services</p>
+          <p>Business web application and SharePoint specialist. Hands-on across architecture, development, integration, automation, testing, deployment and support, turning complex business requirements into maintainable applications and clear user experiences.</p>
+          <ul class="chips">
+            <li class="chip">SharePoint Online</li><li class="chip">Microsoft 365</li><li class="chip">Vue.js</li><li class="chip">REST &amp; Graph APIs</li><li class="chip">Process automation</li>
+          </ul>
+        </article>
+
+        <article class="role reveal" style="--d:.1s">
+          <div class="role__meta"><span class="role__badge">Current</span><span><time datetime="2025-01">Jan 2025</time> – Present<span class="tenure" data-since="2025-01"></span></span></div>
+          <h3 class="role__title">SharePoint Consultant</h3>
+          <p class="role__org">SnapStack</p>
+          <p>Consulting on SharePoint and Microsoft 365 solutions.</p>
+        </article>
+
+        <article class="role reveal" style="--d:.2s">
+          <div class="role__meta"><span class="role__badge">Current</span><span><time datetime="2024-12">Dec 2024</time> – Present<span class="tenure" data-since="2024-12"></span></span></div>
+          <h3 class="role__title">Executive Director</h3>
+          <p class="role__org">ETENA Tech s.r.o.</p>
+          <p>Director of my own small technology company.</p>
+        </article>
+      </div>
+
+      <div class="prev">
+        <h3 class="reveal">Previous experience</h3>
+        <ol class="tl">
+          <li class="tl__item reveal"><span class="tl__date">Oct 2010 – May 2014</span><div><p class="tl__role">SharePoint Developer</p><p class="tl__org">Wincor Nixdorf</p></div></li>
+          <li class="tl__item reveal"><span class="tl__date">May – Sep 2010</span><div><p class="tl__role">Software Developer</p><p class="tl__org">SIVECO Romania</p></div></li>
+          <li class="tl__item reveal"><span class="tl__date">Jun 2008 – May 2010</span><div><p class="tl__role">Analyst Programmer</p><p class="tl__org">Ubisoft</p></div></li>
+          <li class="tl__item reveal"><span class="tl__date">Oct 2007 – Apr 2008</span><div><p class="tl__role">Analyst Programmer</p><p class="tl__org">Dreko Inc.</p></div></li>
+          <li class="tl__item reveal"><span class="tl__date">2001 – 2005</span><div><p class="tl__role">IT Specialist</p><p class="tl__org">Siv'tel</p></div></li>
+        </ol>
+      </div>
+      <p class="fineprint reveal">Role descriptions are deliberately high level. I don't publish employer-internal, customer or project details.</p>
+    </div>
+  </section>
+
+  <!-- ============ CREDENTIALS ============ -->
+  <section class="section" id="credentials" aria-labelledby="credentials-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow"><span aria-hidden="true">05 /</span> Credentials</p>
+        <h2 id="credentials-title">Certified, educated, multilingual.</h2>
+      </header>
+
+      <div class="cred">
+        <div class="reveal">
+          <h3>Certifications &amp; education</h3>
+          <ul class="cards">
+            <li class="card"><p class="card__kind">Certification</p><h4>MCPS: Microsoft Certified Professional</h4><p>Core Solutions of Microsoft SharePoint Server 2013</p></li>
+            <li class="card"><p class="card__kind">Certification</p><h4>ITIL V3 Foundation</h4><p>IT service management framework</p></li>
+            <li class="card card--wide"><p class="card__kind">Education · 1997 – 2001</p><h4>Licentiate Degree in Management and Marketing</h4><p>Romanian-American University, Bucharest</p></li>
+          </ul>
+          <details class="more">
+            <summary>Additional training</summary>
+            <ul>
+              <li>Certificate of Attendance: Power Apps and Power Automate seminar</li>
+              <li>Certificate of Achievement: Implementing Microsoft Office SharePoint Server 2007</li>
+              <li>Certificate of Achievement: Accelerated Training for Business Intelligence Developers, SQL Server 2005</li>
+            </ul>
+          </details>
+        </div>
+
+        <div class="reveal" style="--d:.12s">
+          <h3>Languages</h3>
+          <ul class="langs">
+            <li class="lang"><div class="lang__top"><strong>Romanian</strong><span class="lang__level">Native or bilingual</span></div><div class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></li>
+            <li class="lang"><div class="lang__top"><strong>English</strong><span class="lang__level">Full professional</span></div><div class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></li>
+            <li class="lang"><div class="lang__top"><strong>Spanish</strong><span class="lang__level">Limited working</span></div><div class="meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></li>
+            <li class="lang"><div class="lang__top"><strong>Czech</strong><span class="lang__level">Elementary</span></div><div class="meter" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMMUNITY ============ -->
+  <section class="section section--alt" id="community" aria-labelledby="community-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow"><span aria-hidden="true">06 /</span> Community</p>
+        <h2 id="community-title">Sharing what I know, in public.</h2>
+        <p class="lead">For over 15 years I've answered developers' questions on Stack Overflow, mostly C#, LINQ, .NET and ASP.NET, and asked and answered SharePoint questions on SharePoint Stack Exchange.</p>
+      </header>
+
+      <div class="community">
+        <article class="net net--primary reveal" aria-labelledby="so-title">
+          <div class="net__head">
+            <div>
+              <h3 id="so-title">Stack Overflow</h3>
+              <p class="net__sub">Member for 15+ years · Gold badge in C#</p>
+            </div>
+            <a class="net__link" href="https://stackoverflow.com/users/674700/alex-filipovici" target="_blank" rel="noopener noreferrer">View profile<span class="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <dl class="netstats">
+            <div><dt>Reputation</dt><dd><span data-count="32.8" data-decimals="1" data-suffix="k">32.8k</span></dd></div>
+            <div><dt>People reached</dt><dd><span data-count="4" data-decimals="1" data-suffix="M">4.0M</span></dd></div>
+            <div><dt>Answers</dt><dd><span data-count="735">735</span></dd></div>
+            <div><dt>C# tag score</dt><dd><span data-count="1891" data-sep="1">1,891</span></dd></div>
+          </dl>
+          <ul class="medals" aria-label="Badges earned">
+            <li><i class="m-gold" aria-hidden="true"></i>7 gold</li>
+            <li><i class="m-silver" aria-hidden="true"></i>61 silver</li>
+            <li><i class="m-bronze" aria-hidden="true"></i>81 bronze</li>
+          </ul>
+          <h4>Most helpful answers</h4>
+          <ul class="answers">
+            <li><b>624</b><a href="https://stackoverflow.com/questions/17995706/how-can-i-get-the-index-of-an-item-in-a-list-in-a-single-step/17995892#17995892" target="_blank" rel="noopener noreferrer">How can I get the index of an item in a list in a single step?<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><b>274</b><a href="https://stackoverflow.com/questions/19977833/anti-forgery-token-issues/20000098#20000098" target="_blank" rel="noopener noreferrer">Anti-forgery token issues<span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><b>217</b><a href="https://stackoverflow.com/questions/13749138/asp-net-4-5-has-not-been-registered-on-the-web-server/13749209#13749209" target="_blank" rel="noopener noreferrer">ASP.NET 4.5 has not been registered on the Web server<span class="sr-only"> (opens in a new tab)</span></a></li>
+          </ul>
+          <p class="snap">Figures as of November 2026.</p>
+        </article>
+
+        <div class="net-col">
+          <article class="net reveal" style="--d:.12s" aria-labelledby="se-title">
+            <div class="net__head">
+              <div>
+                <h3 id="se-title">SharePoint Stack Exchange</h3>
+                <p class="net__sub">REST APIs, workflows, permissions</p>
+              </div>
+              <a class="net__link" href="https://sharepoint.stackexchange.com/users/13225/alex-filipovici" target="_blank" rel="noopener noreferrer">View profile<span class="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+            </div>
+            <dl class="netstats netstats--3">
+              <div><dt>Reach</dt><dd>63k</dd></div>
+              <div><dt>Answers</dt><dd>7</dd></div>
+              <div><dt>Questions</dt><dd>25</dd></div>
+            </dl>
+          </article>
+
+          <article class="net reveal" style="--d:.2s" aria-labelledby="else-title">
+            <h3 id="else-title">Elsewhere</h3>
+            <p class="net__sub">The best place to follow my career and say hello.</p>
+            <div class="elsewhere">
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/alexfilipovici/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+              <a class="btn btn--ghost" href="https://github.com/AlexFilipovici" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="wrap contact__inner">
+      <div class="reveal">
+        <p class="eyebrow"><span aria-hidden="true">07 /</span> Contact</p>
+        <h2 id="contact-title">Let's talk.</h2>
+        <p class="lead">Whether it's a SharePoint or Microsoft 365 solution that needs an architect's view, an enterprise web application, or an integration to untangle, I'd be glad to hear about it.</p>
+        <a class="mail" id="email-text" href="mailto:admin@alexfilipovici.cz?subject=Enquiry%20from%20alexfilipovici.cz">admin@alexfilipovici.cz</a>
+        <div class="contact__cta">
+          <a class="btn btn--primary" href="mailto:admin@alexfilipovici.cz?subject=Enquiry%20from%20alexfilipovici.cz"><svg class="i" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Send an email</a>
+          <button class="btn btn--ghost copy-btn" id="copy-email" type="button" data-email="admin@alexfilipovici.cz">
+            <svg class="i i-copy" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>
+            <svg class="i i-check" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>
+            <span id="copy-label">Copy address</span>
+          </button>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/alexfilipovici/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+      <aside class="topics reveal" style="--d:.12s" aria-labelledby="topics-title">
+        <h3 id="topics-title">Ways I can help</h3>
+        <ul>
+          <li>SharePoint and Microsoft 365 solution architecture</li>
+          <li>Enterprise web and single-page applications</li>
+          <li>API, Microsoft Graph and workflow integration</li>
+          <li>Technical consultancy and architecture reviews</li>
+          <li>Application modernization and migration</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__row">
+      <p>© <span id="year">2026</span> Alex Filipovici</p>
+      <ul>
+        <li><a href="#top">Back to top</a></li>
+        <li><a href="mailto:admin@alexfilipovici.cz">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/alexfilipovici/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li><a href="https://github.com/AlexFilipovici" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li><a href="https://stackoverflow.com/users/674700/alex-filipovici" target="_blank" rel="noopener noreferrer">Stack Overflow<span class="sr-only"> (opens in a new tab)</span></a></li>
+      </ul>
+    </div>
+    <div class="disclaimer">
+      <p>This is a personal professional website. The information and opinions presented here are personal and do not represent or imply endorsement by any current or former employer.</p>
+      <p>This site sets no cookies and uses no analytics or third-party requests. Your light or dark theme choice is stored only in your browser.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var d = document, root = d.documentElement;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (s, c) { return (c || d).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || d).querySelectorAll(s)); };
+  var hasIO = 'IntersectionObserver' in window;
+
+  /* Footer year */
+  var yr = $('#year'); if (yr) yr.textContent = new Date().getFullYear();
+
+  /* Reveal on scroll (content stays visible if IntersectionObserver is unavailable) */
+  var reveals = $$('.reveal');
+  if (!hasIO || reduce) {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var revealIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); revealIO.unobserve(e.target); }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(function (el) { revealIO.observe(el); });
+  }
+
+  /* Theme toggle */
+  var themeBtn = $('#theme-toggle'), metaTheme = $('meta[name="theme-color"]');
+  var themeColors = { light: '#F5F2EC', dark: '#0A1522' };
+  function applyTheme(t) {
+    root.setAttribute('data-theme', t);
+    if (metaTheme) metaTheme.setAttribute('content', themeColors[t]);
+    themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  applyTheme(root.getAttribute('data-theme') || 'light');
+  themeBtn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+  if (window.matchMedia) {
+    var mq = matchMedia('(prefers-color-scheme: dark)');
+    var onScheme = function (e) {
+      var stored = null; try { stored = localStorage.getItem('theme'); } catch (x) {}
+      if (!stored) applyTheme(e.matches ? 'dark' : 'light');
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onScheme);
+  }
+
+  /* Mobile menu */
+  var menuBtn = $('#menu-toggle'), nav = $('#site-nav');
+  function setMenu(open) {
+    menuBtn.setAttribute('aria-expanded', String(open));
+    nav.classList.toggle('is-open', open);
+  }
+  menuBtn.addEventListener('click', function () { setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') { setMenu(false); menuBtn.focus(); }
+  });
+
+  /* Scroll spy */
+  if (hasIO) {
+    var links = {};
+    $$('.nav a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var a = links[e.target.id]; if (!a) return;
+        if (e.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].removeAttribute('aria-current'); });
+          a.setAttribute('aria-current', 'true');
         }
-        
-        // Merged form submission handler
-        const form = document.getElementById("form");
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            
-            // Show loading state
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-            
-            const formData = new FormData(form);
-            
-            fetch("https://usebasin.com/f/d84ea63dec0b", {
-                method: "POST",
-                headers: {
-                    "Accept": "application/json",
-                },
-                body: formData,
-            })
-            .then((response) => {
-                // Reset button
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-                
-                if (response.status === 200) {
-                    console.log("success");
-                    showFormFeedback('Thank you for your interest! We will contact you within 24 hours to discuss your requirements.', 'success');
-                    form.reset();
-                } else {
-                    console.log("fail");
-                    showFormFeedback('There was an error sending your message. Please try again or contact us directly at info@etenatech.com', 'error');
-                }
-            })
-            .catch((error) => {
-                console.log(error);
-                // Reset button
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-                showFormFeedback('There was an error sending your message. Please try again or contact us directly at info@etenatech.com', 'error');
-            });
-        });
-    </script>
-</body>
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(links).forEach(function (id) { var s = d.getElementById(id); if (s) spy.observe(s); });
+  }
 
+  /* Count-up numbers */
+  function fmt(v, dec, sep) {
+    var s = v.toFixed(dec);
+    return sep ? Number(s).toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) : s;
+  }
+  var counters = $$('[data-count]');
+  if (hasIO && !reduce) {
+    var countIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        countIO.unobserve(e.target);
+        var el = e.target, to = parseFloat(el.dataset.count), dec = parseInt(el.dataset.decimals || '0', 10);
+        var suffix = el.dataset.suffix || '', sep = !!el.dataset.sep, t0 = null, dur = 1400;
+        function tick(t) {
+          if (t0 === null) t0 = t;
+          var p = Math.min((t - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(to * eased, dec, sep) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { countIO.observe(el); });
+  }
+
+  /* Layered skills filter */
+  var stack = $('[data-stack]');
+  if (stack) {
+    var panels = $$('.panel', stack), status = $('#stack-status');
+    var navEl = d.createElement('div');
+    navEl.className = 'stack__nav';
+    navEl.setAttribute('role', 'group');
+    navEl.setAttribute('aria-label', 'Filter skills by layer');
+    var total = panels.reduce(function (n, p) { return n + $$('.chip', p).length; }, 0);
+    var items = [{ id: 'all', name: 'All layers', count: total, no: '00' }].concat(panels.map(function (p, i) {
+      return { id: p.dataset.layer, name: $('h3', p).textContent, count: $$('.chip', p).length, no: '0' + (i + 1) };
+    }));
+    var buttons = items.map(function (it) {
+      var b = d.createElement('button');
+      b.type = 'button'; b.className = 'layer'; b.dataset.layer = it.id; b.setAttribute('aria-pressed', 'false');
+      b.innerHTML = '<span class="layer__no" aria-hidden="true">' + it.no + '</span><span class="layer__name"></span><span class="layer__count"></span>';
+      $('.layer__name', b).textContent = it.name;
+      $('.layer__count', b).textContent = it.count;
+      b.setAttribute('aria-label', it.name + ', ' + it.count + ' skills');
+      navEl.appendChild(b);
+      return b;
+    });
+    stack.insertBefore(navEl, stack.firstChild);
+    var select = function (id, announce) {
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.layer === id)); });
+      var shown = 0;
+      panels.forEach(function (p) {
+        var show = id === 'all' || p.dataset.layer === id;
+        p.hidden = !show;
+        p.classList.remove('is-entering');
+        if (show) { shown++; if (announce && !reduce) { void p.offsetWidth; p.classList.add('is-entering'); } }
+      });
+      if (announce && status) {
+        var it = items.filter(function (x) { return x.id === id; })[0];
+        status.textContent = id === 'all' ? 'Showing all ' + total + ' skills across ' + panels.length + ' layers.' : 'Showing ' + it.count + ' skills in the ' + it.name + ' layer.';
+      }
+    };
+    buttons.forEach(function (b) { b.addEventListener('click', function () { select(b.dataset.layer, true); }); });
+    select('all', false);
+  }
+
+  /* Process steps */
+  var steps = $('[data-steps]');
+  if (steps) {
+    if (!hasIO || reduce) { steps.classList.add('is-in'); }
+    else {
+      var stepIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { steps.classList.add('is-in'); stepIO.disconnect(); } });
+      }, { threshold: 0.25 });
+      stepIO.observe(steps);
+    }
+  }
+
+  /* Live tenure for current roles */
+  $$('[data-since]').forEach(function (el) {
+    var p = el.dataset.since.split('-'), y = +p[0], m = +p[1], now = new Date();
+    var months = (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m);
+    if (months < 1) return;
+    var yrs = Math.floor(months / 12), mo = months % 12, out = [];
+    if (yrs) out.push(yrs + (yrs === 1 ? ' yr' : ' yrs'));
+    if (mo) out.push(mo + ' mo');
+    el.textContent = ' · ' + out.join(' ');
+  });
+
+  /* Copy email */
+  var copyBtn = $('#copy-email');
+  if (copyBtn) {
+    var label = $('#copy-label'), live = $('#copy-status'), timer;
+    var done = function (msg, ok) {
+      live.textContent = msg; label.textContent = ok ? 'Copied' : 'Select and copy';
+      copyBtn.classList.toggle('is-done', ok);
+      clearTimeout(timer);
+      timer = setTimeout(function () { label.textContent = 'Copy address'; copyBtn.classList.remove('is-done'); }, 2400);
+    };
+    copyBtn.addEventListener('click', function () {
+      var email = copyBtn.dataset.email;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(function () { done('Email address copied to clipboard.', true); }, fallback);
+      } else { fallback(); }
+      function fallback() {
+        var r = d.createRange(); r.selectNodeContents($('#email-text'));
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        done('Address selected. Press Control C to copy.', false);
+      }
+    });
+  }
+
+  /* Hero spotlight follows the pointer */
+  var hero = $('.hero');
+  if (hero && !reduce && window.matchMedia && matchMedia('(pointer: fine)').matches) {
+    var raf = 0, px = 0, py = 0;
+    hero.addEventListener('pointermove', function (e) {
+      px = e.clientX; py = e.clientY;
+      if (raf) return;
+      raf = requestAnimationFrame(function () {
+        raf = 0;
+        var r = hero.getBoundingClientRect();
+        hero.style.setProperty('--mx', (px - r.left) + 'px');
+        hero.style.setProperty('--my', (py - r.top) + 'px');
+      });
+    }, { passive: true });
+  }
+})();
+</script>
+</body>
 </html>
